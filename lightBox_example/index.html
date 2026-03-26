@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Box </title>
+</head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 1320px;
+            border: 1px solid red;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .mainItem img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .lightBoxOverLay{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            background-color: rgba(0,0,0,0.5);
+            transform: scale(0); 
+        }
+        .lightBoxMid{
+            width: 800px;
+            position: relative;
+        }
+        .lightBoxMid img{
+            width: 100%;
+        }
+        .lightBoxMid span{
+             position: absolute;
+             right: 0px;
+             font-size: 50px;
+             background-color: red;
+             cursor: pointer;
+             color: white;
+        }
+        .lightBoxOverOpen{
+            transform: scale(1);
+        }
+    </style>
+<body>
+    <div class="lightBoxOverLay ">
+        <div class="lightBoxMid">
+            <span>&times;</span>
+            <img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="main">
+       <div class="mainItem">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh "
+                alt="">
+        </div>
+
+
+        <div class="mainItem">
+            <img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
+                alt="">
+        </div>
+
+        <div class="mainItem">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh "
+                alt="">
+        </div>
+
+        <div class="mainItem">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/close-up-image-of-a-vibrant-orange-helenium-flower-royalty-free-image-1709587119.jpg?crop=0.536xw:1.00xh;0.260xw,0 "
+                alt="">
+        </div>
+     <div class="mainItem">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh" alt="">
+    </div>
+
+    <div class="mainItem">
+        <img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg"
+            alt="">
+    </div>
+    <div class="mainItem">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/dahlia-1508785047.jpg?crop=1.00xw:0.669xh;0,0.0136xh "
+            alt="">
+    </div>
+    <div class="mainItem">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/close-up-image-of-a-vibrant-orange-helenium-flower-royalty-free-image-1709587119.jpg?crop=0.536xw:1.00xh;0.260xw,0 "
+            alt="">
+    </div>
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
